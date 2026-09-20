@@ -1,0 +1,8 @@
+services:
+  agent:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: python -m app.main
